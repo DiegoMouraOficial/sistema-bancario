@@ -20,7 +20,7 @@ Requisitos
 
 ### Passos para Configuração
 
-1.Clone o repositório
+1. Clone o repositório
 
 ```
 git clone https://github.com/DiegoMouraOficial/sistema-bancario.git
@@ -28,7 +28,7 @@ git clone https://github.com/DiegoMouraOficial/sistema-bancario.git
 cd sistema-bancario
 cd bancodigital
 ```
-2.Configure o banco de dados PostgreSQL e atualize o arquivo application.properties:
+2. Configure o banco de dados PostgreSQL e atualize o arquivo application.properties:
 
 ```
 # application.properties
@@ -40,7 +40,7 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
 ```
-3.Compile e execute a aplicação:
+3. Compile e execute a aplicação:
 
 ```bash
 mvn clean install
@@ -50,12 +50,15 @@ mvn spring-boot:run
 ```
 ### Rotas da API
 #### Clientes
-->>> Cadastro de Cliente <<<-
+
+<details>
+<summary>Cadastrar de Cliente</summary>
 - URL: /clientes/cadastrar
 - Método: POST
 - Descrição: Cadastra um novo cliente no sistema.
 - Corpo da Requisição (JSON)
-```
+
+```json
 {
   "nome": "Diego Moura",
   "cpf": "3584141411",
@@ -67,7 +70,7 @@ mvn spring-boot:run
 ```
 #### Resposta de Sucesso:
 - Status: 201 Created
-```
+```json
 {
 	"id": "9d90cb72-1d01-46e0-bf20-83eb168f4e5d",
 	"nome": "Diego Moura",
@@ -79,6 +82,6 @@ mvn spring-boot:run
 	"rendaSalarial": 4000.0
 }
 ```
-
+</details>
     
 
