@@ -23,15 +23,16 @@ Requisitos
 1.Clone o repositório
 
 ```
-git clone https://github.com/seu-usuario/banking-system.git
+git clone https://github.com/DiegoMouraOficial/sistema-bancario.git
 
-cd banking-system
+cd sistema-bancario
+cd bancodigital
 ```
 2.Configure o banco de dados PostgreSQL e atualize o arquivo application.properties:
 
 ```
 # application.properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/banking_system
+spring.datasource.url=jdbc:postgresql://localhost:5432/bancodigital
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
@@ -48,7 +49,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 ### Rotas da API
-#### Cliente
+#### Clientes
 ->>> Cadastro de Cliente <<<-
 - URL: /clientes/cadastrar
 - Método: POST
@@ -56,26 +57,27 @@ mvn spring-boot:run
 - Corpo da Requisição (JSON)
 ```
 {
-  "nome": "João Silva",
-  "cpf": "12345678900",
-  "email": "joao.silva@example.com",
-  "endereco": "Rua Exemplo, 123",
-  "rendaSalarial": 5000,
-  "senha": "senha123"
+  "nome": "Diego Moura",
+  "cpf": "3584141411",
+  "email": "diego@example.com",
+  "senha": "senha1234",
+  "endereco": "Rua Exemplo, 1243",
+  "rendaSalarial": 4000.0
 }
 ```
 #### Resposta de Sucesso:
 - Status: 201 Created
 ```
-  {
-  "id": "c0bfbe97-4285-46fc-9a67-b88b0c9d859f",
-  "nome": "João Silva",
-  "cpf": "12345678900",
-  "email": "joao.silva@example.com",
-  "endereco": "Rua Exemplo, 123",
-  "rendaSalarial": 5000,
-  "senha": "senha123"
-  }
+{
+	"id": "9d90cb72-1d01-46e0-bf20-83eb168f4e5d",
+	"nome": "Diego Moura",
+	"cpf": "3584141411",
+	"email": "diego@example.com",
+	"senha": "senha1234",
+	"endereco": "Rua Exemplo, 1243",
+	"contas": [],
+	"rendaSalarial": 4000.0
+}
 ```
 
     
